@@ -212,7 +212,7 @@
                         <div class="col-md-12">
                             <nav aria-label="Page navigation example">
                                 <ul class="pagination justify-content-center">
-                                    <c:if test="${sotrang>0}">
+                                    <c:if test="${(sotrang>0)&&(trang>1)}">
                                         <li class="page-item">
                                             <a class="page-link" href="product-list.jsp?${req}${req1}trang=${trang-1}">Previous</a>
                                         </li>
@@ -225,7 +225,7 @@
                                             <li class="page-item"><a class="page-link" href="product-list.jsp?${req}${req1}trang=${i}">${i}</a></li>
                                         </c:if>
                                     </c:forEach>
-                                    <c:if test="${sotrang>0}">
+                                    <c:if test="${(sotrang>0)&&(trang<sotrang)}">
                                     <li class="page-item">
                                         <a class="page-link" href="product-list.jsp?${req}${req1}trang=${trang+1}">Next</a>
                                     </li>
